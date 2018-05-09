@@ -1,5 +1,4 @@
-# Android Virtual Device for Docker [![](https://images.microbadger.com/badges/image/thedrhax/android-avd.svg)](https://hub.docker.com/r/thedrhax/android-avd)
-
+# Android Virtual Device for Docker [![](https://images.microbadger.com/badges/image/swind/android-avd.svg)](https://microbadger.com/images/swind/android-avd "Get your own image badge on microbadger.com")
 This image contains the latest version of Android SDK with configured AVD.
 
 ## Supported tags and respective `Dockerfile` links
