@@ -9,4 +9,6 @@ echo n | $ANDROID_HOME/tools/bin/avdmanager create avd \
   echo 'hw.keyboard = true';
 ) >> /root/.android/avd/Docker.avd/config.ini
 
+adb -a -P 5037 server nodaemon&
+
 exec $*
