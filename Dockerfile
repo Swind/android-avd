@@ -10,8 +10,8 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists /var/cache/apt
 
-ENV ABI="x86_64" \
-    TARGET="android-26" \
+ENV ABI="x86" \
+    TARGET="android-25" \
     TAG="google_apis" \
     NAME="Docker" \
 
@@ -35,6 +35,7 @@ RUN git clone https://github.com/novnc/noVNC.git \
  && git checkout v0.6.2 \
  && git clone https://github.com/novnc/websockify.git utils/websockify
 
+ADD .emulator_console_auth_token /root
 ADD container /
 EXPOSE 5554 5555
 ENTRYPOINT ["/entrypoint.sh"]
