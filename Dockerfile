@@ -35,6 +35,14 @@ RUN git clone https://github.com/novnc/noVNC.git \
  && git checkout v0.6.2 \
  && git clone https://github.com/novnc/websockify.git utils/websockify
 
+# Install pulseaudio
+RUN apk add --no-cache --purge -uU curl \
+    alsa-lib alsa-utils \
+	  libdaemon popt soxr libconfig avahi python3 mpg123 expect \
+    pulseaudio pulseaudio-dev pulseaudio-zeroconf pulseaudio-system pulseaudio-utils pulseaudio-alsa pul \
+    && rm -rf /var/cache/apk/* /tmp/*
+
+
 ADD .emulator_console_auth_token /root
 ADD container /
 EXPOSE 5554 5555
